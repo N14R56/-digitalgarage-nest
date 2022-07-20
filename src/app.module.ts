@@ -10,6 +10,7 @@ import { Car } from './cars/entities/car.entity';
     TypeOrmModule.forRoot({
       type: 'mongodb',
       url: 'mongodb+srv://mmurray:hXqlcMSw8RnGoFgA@digitalgarage.gt4b6a8.mongodb.net/?retryWrites=true&w=majority',
+      database: "digitalgarage",
       entities: [Car],
       synchronize: true,
     }),

@@ -13,6 +13,13 @@ export class CarsService {
   ){}
 
   create(createCarDto: CreateCarDto) {
+    let car1 = new Car()
+    car1.brand = "Porsche"
+    car1.model = "911"
+    car1.year = "2017" 
+    this.carsRepository.save(
+      car1
+    )
     return 'This action adds a new car';
   }
 
