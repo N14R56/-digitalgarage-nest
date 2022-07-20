@@ -1,15 +1,16 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ObjectID } from 'typeorm';
 
+@Entity()
 export class Car {
     @PrimaryGeneratedColumn()
-    id: number;
+    _id: ObjectID;
   
     @Column()
-    firstName: string;
+    brand: string;
   
     @Column()
-    lastName: string;
+    model: string;
   
-    @Column({ default: true })
-    isActive: boolean;
+    @Column()
+    year: string;
 }

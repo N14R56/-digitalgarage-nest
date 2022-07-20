@@ -9,7 +9,7 @@ import { CarsModule } from './cars/cars.module';
     TypeOrmModule.forRoot({
       type: 'mongodb',
       url: 'mongodb+srv://mmurray:hXqlcMSw8RnGoFgA@digitalgarage.gt4b6a8.mongodb.net/?retryWrites=true&w=majority',
-      entities: [],
+      entities: ['Car'],
       synchronize: true,
     }),
     CarsModule,
