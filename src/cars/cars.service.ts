@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { ObjectId } from 'mongodb';
 import { Repository } from 'typeorm';
 import { CreateCarDto } from './dto/create-car.dto';
 import { UpdateCarDto } from './dto/update-car.dto';
@@ -28,8 +29,9 @@ export class CarsService {
     // return `This action returns all cars`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} car`;
+  findOne(id: string) {
+    let string = ObjectId.createFromHexString('62b8c255df1a488c088c8bc7')
+    return this.carsRepository.findOneBy({ '_id' : string });
   }
 
   update(id: number, updateCarDto: UpdateCarDto) {
