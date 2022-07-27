@@ -26,12 +26,10 @@ export class CarsService {
 
   findAll() {
     return this.carsRepository.find();
-    // return `This action returns all cars`;
   }
 
   findOne(id: string) {
-    let string = ObjectId.createFromHexString('62b8c255df1a488c088c8bc7')
-    return this.carsRepository.findOneBy({ '_id' : string });
+    return this.carsRepository.findOneBy({ '_id' : new ObjectId(id) });
   }
 
   update(id: number, updateCarDto: UpdateCarDto) {
