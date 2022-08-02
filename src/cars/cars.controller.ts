@@ -7,8 +7,9 @@ import { UpdateCarDto } from './dto/update-car.dto';
 export class CarsController {
   constructor(private readonly carsService: CarsService) {}
 
-  @Get('create')
+  @Post('create')
   create(@Body() createCarDto: CreateCarDto) {
+    console.log(createCarDto)
     return this.carsService.create(createCarDto);
   }
 
