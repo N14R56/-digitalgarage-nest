@@ -4,7 +4,7 @@ import { Entity, Column, ObjectIdColumn } from 'typeorm';
 export class Car {
     @ObjectIdColumn()
     _id: any;
-  
+
     @Column()
     brand: string;
   
