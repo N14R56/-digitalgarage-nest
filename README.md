@@ -1,55 +1,24 @@
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Nest CLI
-
-npx @nestjs/cli --help
+## Most Important Commands
+    npm install
+    npm run start:dev
+    npx @nestjs/cli --help
+    npm run test
+    npm run test:e2e
+    npm run test:cov
 
 ## Endpoints
 
-Examples:
+    00 GET http://localhost:3000/cars
+    01 GET http://localhost:3000/cars/id
+    02 GET http://localhost:3000/cars/{:id}
+    03 POST http://localhost:3000/cars/create
 
-GET http://localhost:3000/cars
+## Requests Examples
 
-GET http://localhost:3000/cars/62b8c255df1a488c088c8bc7
-
-POST http://localhost:3000/cars/create
-
-Body->Raw->JSON:
-
-````bash
-{
-    "brand" : "Toyota",
-    "model" : "Supra",
-    "year" : "2019"
-}
-```
+    02 GET http://localhost:3000/cars/62b8c255df1a488c088c8bc7
+    03 POST http://localhost:3000/cars/create
+        {
+            "brand" : "Toyota",
+            "model" : "Supra",
+            "year" : "2019"
+        }
