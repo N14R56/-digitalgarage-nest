@@ -1,3 +1,6 @@
+## Description
+    Car related REST API.
+
 ## Most Important Commands
     npm install
     npm run start:dev
@@ -7,7 +10,7 @@
     npm run test:cov
 
 ## Endpoints
-
+    
     00 GET http://localhost:3000/cars
     01 GET http://localhost:3000/cars/id
     02 GET http://localhost:3000/cars/{:id}
